@@ -145,8 +145,9 @@ let foodArr = [
 
 //CODE HERE
 
-const filteredFood = foodArr.filter(/* CALLBACK HERE */);
+const filteredFood = foodArr.filter((item) => item.tags.includes("Kids"));
 
+console.log(filteredFood);
 //////////////////PROBLEM 5////////////////////
 /* 
     Now let's write a function that's a little
@@ -187,7 +188,16 @@ const filteredFood = foodArr.filter(/* CALLBACK HERE */);
 */
 
 //CODE HERE
-
+const filterByProperty = (property, number, type) => {
+  let filtered = [];
+  foodArr.filter((item) => {
+    if (type === "above") {
+      if (item.property > number) {
+        filtered.push(item.property);
+      }
+    }
+  });
+};
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.
