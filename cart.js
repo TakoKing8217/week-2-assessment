@@ -87,9 +87,6 @@ vaccinated or non vaccinates (because it's the 2020s)
 how many babies (if they need high chairs)
 if there's a birthday (so we can torment them with song)
 
-
-
-
 /*
     Now, create a customer object following your own
     guidelines.

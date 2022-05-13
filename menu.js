@@ -144,19 +144,9 @@ let foodArr = [
 */
 
 //CODE HERE
-const byTag = () => {
-  let list = [];
-  for (let i = 0; i < foodArr; i++) {
-    if (foodArr[i].tags.includes("Kids")) {
-      list.push(foodArr[i]);
-    }
-  }
-  return list;
-};
 
-const filteredFood = foodArr.filter(byTag());
+const filteredFood = foodArr.filter(/* CALLBACK HERE */);
 
-console.log(filteredFood);
 //////////////////PROBLEM 5////////////////////
 /* 
     Now let's write a function that's a little
