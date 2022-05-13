@@ -7,7 +7,6 @@
     creating customer objects.  
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /*  
     Below is a cart array that has food objects
@@ -19,24 +18,24 @@
 */
 
 const cart = [
-    {
-        name: 'pizza', 
-        price: 9.99
-    }, 
-    {
-        name: 'pasta', 
-        price: 8.99
-    }, 
-    {
-        name: 'salad', 
-        price: 7.99
-    }
-]
+  {
+    name: "pizza",
+    price: 9.99,
+  },
+  {
+    name: "pasta",
+    price: 8.99,
+  },
+  {
+    name: "salad",
+    price: 7.99,
+  },
+];
 
 //CODE HERE
+const summedPrice = cart.reduce((value, value2) => value + value2.price, 0);
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+console.log(summedPrice);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,9 +53,9 @@ const cart = [
 */
 
 //CODE HERE
-
-
-
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+  return cartTotal * (tax + 1) - couponValue;
+};
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -79,8 +78,17 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
+The coutomer will need to provide 
+name of leader (for who to bill or call for during the wait)
+how many patrons (how big a table they need)
+seating preference (by windows or not)
+smoking or non smoking (because it's the 1950s)
+vaccinated or non vaccinates (because it's the 2020s)
+how many babies (if they need high chairs)
+if there's a birthday (so we can torment them with song)
 
-*/
+
+
 
 /*
     Now, create a customer object following your own
@@ -88,3 +96,12 @@ const cart = [
 */
 
 //CODE HERE
+let customer = {
+  leaderName: "Severus",
+  partons: 37,
+  windowSeating: false,
+  smoking: true,
+  vaccinates: true,
+  numBabies: 4,
+  birthday: true,
+};

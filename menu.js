@@ -7,7 +7,6 @@
     and filtering those arrays. 
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /*  
     Create an object called `pizza` that has 6
@@ -32,7 +31,14 @@
 
 //CODE HERE
 
-
+const pizza = {
+  name: "La Pepperoni Pyzzae",
+  price: 9,
+  category: "Entree",
+  popularity: 10,
+  rating: 5,
+  tags: ["Meat", "Gluten", "Dairy"],
+};
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -44,6 +50,7 @@
 
 //CODE HERE
 
+console.log(pizza.popularity);
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +60,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1]);
 
 /*
     Third, destructure the price off of the
@@ -64,6 +71,9 @@
 
 //CODE HERE
 
+let { price: discountPrice } = pizza;
+
+console.log(discountPrice);
 
 /*
     Fourth, and last, destructure the category
@@ -73,8 +83,9 @@
 */
 
 //CODE HERE
+let { category } = pizza;
 
-
+console.log(category);
 //////////////////PROBLEM 3////////////////////
 /* 
     Create an array with about 5 objects in it.
@@ -88,9 +99,38 @@
 */
 
 //CODE HERE
-
-
-
+let foodArr = [
+  {
+    price: 5,
+    popularity: 7,
+    rating: 4,
+    tags: ["Kids", "Contains gluten", "Dairy Free"],
+  },
+  {
+    price: 3,
+    popularity: 6,
+    rating: 4,
+    tags: ["Adult", "contains alcohol", "drink"],
+  },
+  {
+    price: 3,
+    popularity: 6,
+    rating: 4,
+    tags: ["Adult", "Contains meet", "Warning: Sharp"],
+  },
+  {
+    price: 4,
+    popularity: 2,
+    rating: 5,
+    tags: ["Kids", "contains sea food", "Warning: Hammer Required"],
+  },
+  {
+    price: 4,
+    popularity: 5,
+    rating: 9,
+    tags: ["Elderly", "Contains Meat", "Liquid"],
+  },
+];
 //////////////////PROBLEM 4////////////////////
 /* 
     Let's filter the food objects according
@@ -104,11 +144,19 @@
 */
 
 //CODE HERE
+const byTag = () => {
+  let list = [];
+  for (let i = 0; i < foodArr; i++) {
+    if (foodArr[i].tags.includes("Kids")) {
+      list.push(foodArr[i]);
+    }
+  }
+  return list;
+};
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(byTag());
 
-
-
+console.log(filteredFood);
 //////////////////PROBLEM 5////////////////////
 /* 
     Now let's write a function that's a little
@@ -149,7 +197,6 @@
 */
 
 //CODE HERE
-
 
 /*
     Invoke the `filterByProperty` function passing

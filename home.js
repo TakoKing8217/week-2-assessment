@@ -94,12 +94,12 @@ const canWeDeliverTwo = (zipCode) => {
 // console.log(canWeDeliverTwo(85205));
 // console.log(canWeDeliverTwo(85206));
 // console.log(canWeDeliverTwo(99999));
+
 // //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
     information about a couple of deals that are
     available at the restaurant currently. 
-
     You are going to access the object's properties 
     and change some values. Don't edit the array 
     directly, let's use the `replace` method.
@@ -128,7 +128,11 @@ const deals = [
 */
 
 //CODE HERE
+// deals[0].title = "10% 0ff!";
 
+deals[0].title = deals[0].title.replace("15", "10");
+
+console.log(deals[0]);
 /*
     The restaurant is going to continue its
     family deal for another month. 
@@ -143,3 +147,6 @@ const deals = [
 */
 
 //CODE HERE
+deals[1].desc = deals[1].desc.replace("March", "April").trim();
+
+console.log(deals);
