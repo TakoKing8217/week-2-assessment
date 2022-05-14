@@ -50,7 +50,7 @@ const pizza = {
 
 //CODE HERE
 
-console.log(pizza.popularity);
+// console.log(pizza.popularity);
 
 /*
     Second, log the second tag in your pizza's
@@ -60,7 +60,7 @@ console.log(pizza.popularity);
 */
 
 //CODE HERE
-console.log(pizza.tags[1]);
+// console.log(pizza.tags[1]);
 
 /*
     Third, destructure the price off of the
@@ -73,7 +73,7 @@ console.log(pizza.tags[1]);
 
 let { price: discountPrice } = pizza;
 
-console.log(discountPrice);
+// console.log(discountPrice);
 
 /*
     Fourth, and last, destructure the category
@@ -85,7 +85,7 @@ console.log(discountPrice);
 //CODE HERE
 let { category } = pizza;
 
-console.log(category);
+// console.log(category);
 //////////////////PROBLEM 3////////////////////
 /* 
     Create an array with about 5 objects in it.
@@ -147,7 +147,7 @@ let foodArr = [
 
 const filteredFood = foodArr.filter((item) => item.tags.includes("Kids"));
 
-console.log(filteredFood);
+// console.log(filteredFood);
 //////////////////PROBLEM 5////////////////////
 /* 
     Now let's write a function that's a little
@@ -189,15 +189,16 @@ console.log(filteredFood);
 
 //CODE HERE
 const filterByProperty = (property, number, type) => {
-  let filtered = [];
-  foodArr.filter((item) => {
+  let filteredArray = foodArr.filter((food) => {
     if (type === "above") {
-      if (item.property > number) {
-        filtered.push(item.property);
-      }
+      return food[property] > number;
+    } else {
+      return food[property] < number;
     }
   });
+  return filteredArray;
 };
+
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.
@@ -206,3 +207,4 @@ const filterByProperty = (property, number, type) => {
 */
 
 //CODE HERE
+console.log(filterByProperty("popularity", 9, "below"));
